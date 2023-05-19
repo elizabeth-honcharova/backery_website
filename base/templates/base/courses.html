@@ -1,0 +1,16 @@
+{% extends 'main.html' %} {% block content %} {% load static %}
+
+<!-- ===================== -->
+<!--    P-Header Section   -->
+<!-- ===================== -->
+{% static 'images/about/banner2.png' as the_bg %}
+<section id="page-header" class="blog-header" style="background-image: url({{the_bg}})">
+     <h2>#learnmore</h2>
+     <p>Become a wizard in the kitchen with our courses!</p>
+</section>
+
+<section id="blog">
+     {% include 'base/course_component.html' %}
+</section>
+
+{% endblock %}

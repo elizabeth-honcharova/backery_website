@@ -1,0 +1,16 @@
+{% load static %} 
+{% get_static_prefix as STATIC_PREFIX %}
+
+{% for cart_item in cart_items %}
+
+<tr>
+    <td><a href="{% url 'delete-item' cart_item.id %}"><i class="far fa-times-circle"></i></a></td>
+    {% url 'item-details' cart_item.item.id as the_url %}
+    <td><img src="{{ STATIC_PREFIX }}images/products/{{cart_item.item.imagePath}}" onclick="window.location.href='{{ the_url }}';" alt=""></td>
+    <td>{{cart_item.item.name}}</td>
+    <td>{{cart_item.item.price}} UAH</td>
+    <td>{{cart_item.quantity}}</td>
+    <td>{{cart_item.total_price}} UAH</td>
+</tr>
+
+{% endfor %}

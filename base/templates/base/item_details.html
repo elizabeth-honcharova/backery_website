@@ -1,0 +1,31 @@
+{% extends 'main.html' %} {% block content %} {% load static %}
+
+<!-- ===================== -->
+  <!--   Prodetails Section    -->
+  <!-- ===================== -->
+  <section id="prodetails" class="section-p1">
+    <div class="single-pro-image">
+        {% get_static_prefix as STATIC_PREFIX %}
+      <img src="{{ STATIC_PREFIX }}images/products/{{item.imagePath}}" width="70%" id="MainImg" alt="" />
+  </div>
+    <div class="single-pro-details">
+      <form class="form" action="" method="POST">
+        {% csrf_token %}
+        <h6>Home / {{item.category}}</h6>
+        <h4>{{item.name}}</h4>
+        <h2>{{item.price}} UAH</h2>
+        <input name="quantity" type="number" value="1" />
+        <button class="normal">Add To cart</button>
+        <h4>Product Details</h4>
+        <span>{{item.details}}</span>
+      </form>
+    </div>
+  </section>
+
+  <section id="product1" class="section-p1">
+    <h2>Featured Products</h2>
+    <p class="heading">Bakery From The Same Category</p>
+    {% include 'base/items_component.html' %}
+  </section>
+
+{% endblock %}

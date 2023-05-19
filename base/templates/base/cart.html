@@ -1,0 +1,69 @@
+{% extends 'main.html' %} {% block content %} {% load static %}
+
+    <!-- ===================== -->
+    <!--    P-Header Section   -->
+    <!-- ===================== -->
+    {% static 'images/about/banner2.png' as the_bg %}
+    <section id="page-header" class="about-header"  style="background-image: url({{the_bg}})">
+        <h2>#cart</h2>
+        <p> happy shopping and don't forget about coupons! </p>
+    </section>
+
+    <!-- ===================== -->
+    <!---     cart details    --->
+    <!-- ===================== --> 
+    <section id="cart" class="section-p1">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td>Remove</td>
+                    <td>Image</td>
+                    <td>Product</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Subtotal</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% include 'base/cart_component.html' %}
+            </tbody>
+        </table>
+    </section>
+
+    <!-- ===================== -->
+    <!--     cart add details    -->
+    <!-- ===================== -->
+    <form class="form" action="" method="POST">   {% csrf_token %}
+    <section id="cart-add" class="section-p1">
+        
+     
+        <div id="coupon">
+            <h3>Delivery</h3>
+            <div>
+                <input name='deliveryAddress' type="text" placeholder="Enter Your Delivery Address">
+                <button class="normal">Submit</button>
+            </div>
+        </div>
+        <div id="subtotal">
+            <h3>Cart Totals</h3>
+            <table>
+                <tr>
+                    <td>Cart Subtotal</td>
+                    <td>{{cart_total}} UAH</td>
+                </tr>
+                <tr>
+                    <td>Shipping</td>
+                    <td>55 UAH</td>
+                </tr>
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td><strong>{{total}} UAH</strong></td>
+                </tr>
+            </table>
+            <button class="normal">Make an order</button>
+        </div>
+        
+    </section>
+</form>
+
+{% endblock %}

@@ -1,0 +1,117 @@
+{% extends 'main.html' %} {% block content %} {% load static %}
+
+<!-- ===================== -->
+<!--    Hero Section   -->
+<!-- ===================== -->
+
+{% static 'images/main.jpg' as the_bg %}
+<section id="hero" style="background-image: url({{the_bg}})">
+  <h4>Trade-in-offer</h4>
+  <h2>Super value deals</h2>
+  <h1>On all products</h1>
+  <p>Save more with coupons & up to 70% off!</p>
+  {% url 'shop' as the_url %}
+  <button onclick="window.location.href='{{the_url}}';">Shop Now</button>
+</section>
+<!-- ===================== -->
+<!--    Features Section   -->
+<!-- ===================== -->
+<section id="feature" class="section-p1">
+  <div class="fe-box">
+    <img src="{% static 'images/features/f1.png' %}" alt="" />
+    <h6>Free Shipping</h6>
+  </div>
+  <div class="fe-box">
+    <img src="{% static 'images/features/f2.png' %}" alt="" />
+    <h6>Online Order</h6>
+  </div>
+  <div class="fe-box">
+    <img src="{% static 'images/features/f3.png' %}" alt="" />
+    <h6>Save Money</h6>
+  </div>
+  <div class="fe-box">
+    <img src="{% static 'images/features/f4.png' %}" alt="" />
+    <h6>Promotions</h6>
+  </div>
+  <div class="fe-box">
+    <img src="{% static 'images/features/f5.png' %}" alt="" />
+    <h6>xHappy Sell</h6>
+  </div>
+  <div class="fe-box">
+    <img src="{% static 'images/features/f6.png' %}" alt="" />
+    <h6>F24/7 Support</h6>
+  </div>
+</section>
+<!-- ===================== -->
+<!--    Products Section   -->
+<!-- ===================== -->
+<section id="product1" class="section-p1">
+  <h2>Featured Products</h2>
+  <p class="heading">Summer Bakery Collection New Modern Design</p>
+  {% include 'base/items_component.html' %}
+</section>
+<!-- ===================== -->
+<!--    Products Section   -->
+<!-- ===================== -->
+{% static 'images/about/banner2.png' as the_bg %}
+<section id="banner" lass="section-m1" style="background-image: url({{the_bg}})">
+  <h4>Super Deal</h4>
+  <h2>Up to <span>70% off</span> - All sweet pastries and breads</h2>
+  {% url 'shop' as the_url %}
+  <button class="normal" onclick="window.location.href='{{the_url}}';">Buy More</button>
+</section>
+<!-- ===================== -->
+<!--    Banners   -->
+<!-- ===================== -->
+<section id="sm-banner" class="section-p1">
+  
+  {% static 'images/banner/b1.jpg' as the_banner %}
+  <div class="banner-box"  style="background-image: url({{the_banner}})">
+    <div class="overlay"></div>
+    <div class="banner-content content">
+      <h4>Crazy Deals</h4>
+      <h2>Buy 1 Get 1 Free</h2>
+      <span>The best classic cake</span>
+      <button class="white">Learn More</button>
+    </div>
+  </div>
+  
+  {% static 'images/banner/b3.jpg' as the_banner %}
+  <div class="banner-box"  style="background-image: url({{the_banner}})">
+    <div class="overlay"></div>
+    <div class="banner-content content">
+      <h4>Bread</h4>
+      <h2>Upcoming Season</h2>
+      <span>The best bread</span>
+      <button class="white">Collection</button>
+    </div>
+  </div>
+</section>
+<section id="banner3" class="section-p1">
+  {% static 'images/banner/b4.jpg' as the_banner %}
+  <div class="banner-box"  style="background-image: url({{the_banner}})">
+    <div class="overlay"></div>
+    <div class="content">
+      <h2>Seasonal Sale</h2>
+      <h3>Summer Bakery Collection 50% Off</h3>
+    </div>
+  </div>
+  {% static 'images/banner/b5.jpg' as the_banner %}
+  <div class="banner-box"  style="background-image: url({{the_banner}})">
+    <div class="overlay"></div>
+    <div class="content">
+      <h2>Tasty Collection</h2>
+      <h3>Cookies with special prices</h3>
+    </div>
+  </div>
+  {% static 'images/banner/b6.jpg' as the_banner %}
+  <div class="banner-box"  style="background-image: url({{the_banner}})">
+    <div class="overlay"></div>
+    <div class="content">
+      <h2>New Cookies Collection</h2>
+      <h3>New Dunuts Collection</h3>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

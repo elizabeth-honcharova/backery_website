@@ -1,0 +1,85 @@
+{% extends 'main.html' %} {% block content %} {% load static %}
+
+    <!-- ===================== -->
+    <!--    P-Header Section   -->
+    <!-- ===================== -->
+
+    {% static 'images/about/banner2.png' as the_bg %}
+    <section id="page-header" class="about-header" style="background-image: url({{the_bg}})">
+        <h2>#let's_talk</h2>
+
+        <p> leave a messege , we love to hear from you! </p>
+    </section>
+    <!-- ===================== -->
+    <!--     contact details    -->
+    <!-- ===================== -->
+    <section id="contact-details" class="section-p1 ">
+        <div class="details">
+            <span>GET IN TOUCH </span>
+            <h2>Visit one of our agency locations in Kyiv or contact us today to experience the mouth-watering delights of our bakery.</h2>
+            <h3> HEAD OFFICE</h3>
+            <div>
+                <li>
+                    <i class="fa fa-map"></i>
+                    <p>The territorial layout of Igor Sikorsky Kyiv Polytechnic Institute</p>
+                </li>
+                <li>
+                    <i class="far fa-envelope"></i>
+                    <p>zhenia.yf@gmail.com</p>
+                </li>
+                <li>
+                    <i class="fas fa-phone-alt"></i>
+                    <p>+380970807597</p>
+                </li>
+                <li>
+                    <i class="far fa-clock "></i>
+                    <p>Monday to stutrday 9:00 am to 16:00 pm</p>
+                </li>
+            </div>
+        </div>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2136.3403337749687!2d30.4587724236603!3d50.44946113918568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce82b9d930e5%3A0x8b1e1e0c5175e2f!2z0JrQn9CGLCDQutC-0YDQv9GD0YEg4oSWMQ!5e0!3m2!1suk!2sua!4v1684107894704!5m2!1suk!2sua" 
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </div>
+    </section>
+    <!-- ===================== -->
+    <!--     form section      -->
+    <!-- ===================== -->
+    <section id="form-details" class="section-p1">
+        <form action="">
+            <span> LEAVE A MESSEGE</span>
+            <h2> we love to hear from you</h2>
+            <input type="text" placeholder=" YOUR NAME">
+            <input type="text" placeholder=" E-MAIL">
+            <input type="text" placeholder=" SUBJECT">
+            <textarea name="" id="" clos="30" rows="10" placeholder="YOUR MESSAGE"></textarea>
+            <button class="normal">submit</button>
+        </form>
+        <div class="people">
+            <div>
+                <img src="{% static 'images/people/1.png' %}" alt="" />
+                <p>
+                    <span>Liza</span>
+                    - senior marketing manager <br /> phone:0978467953<br /> E-mail:liza@gmail.com
+                </p>
+            </div>
+            <div>
+                <img src="{% static 'images/people/2.png' %}" alt="" />
+                <p>
+                    <span>Zhenia</span>
+                    - senior marketing manager <br /> phone:0970845692<br /> E-mail:zhenia@gmail.com
+                </p>
+            </div>
+            <div>
+                <img src="{% static 'images/people/3.png' %}" alt="" />
+                <p>
+                    <span>Mops</span>
+                    - senior marketing manager <br /> phone:0950785946<br /> E-mail:mops@gmail.com
+                </p>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

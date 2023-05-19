@@ -1,0 +1,39 @@
+{% load static %} {% include 'newsletter.html' %}
+
+<!-- ===================== -->
+<!-----       Footer -------->
+<!-- ===================== -->
+<footer class="section-p1">
+  <div class="col">
+    <img src="{% static 'images/logo.svg' %}" alt="" class="logo" />
+    <h4>Contact</h4>
+    <p><strong>Adress:</strong> Kyiv, Ukraine</p>
+    <p><strong>Phone:</strong> 0970849659</p>
+    <p><strong>Hours:</strong> 10:00am -11:00pm, Sat -Thu</p>
+    <div class="icon follow">
+      <h4>Follow US</h4>
+      <i class="fab fa-facebook-f"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-pinterest-p"></i>
+      <i class="fab fa-youtube"></i>
+    </div>
+  </div>
+  <div class="col">
+    <h4>About</h4>
+    <a href="{% url 'about' %}">About Us</a>
+    <a href="{% url 'contact' %}">Contact Us</a>
+  </div>
+  <div class="col">
+    <h4>My Account</h4>
+    <a href="{% url 'login' %}">Account</a>
+    <a href="{% url 'cart' %}">View Cart</a>
+  </div>
+  <div class="col install">
+    <p>Secured Payment Gateways</p>
+    <img src="{% static 'images/pay/pay.png' %}" alt="" />
+  </div>
+  <div class="copyright">
+    <p>&copy; 2023, Web Development Project - Lisa&Zhenia</p>
+  </div>
+</footer>

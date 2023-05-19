@@ -1,0 +1,20 @@
+{% extends 'main.html' %} {% block content %} {% load static %}
+
+<!-- ===================== -->
+<!--    P-Header Section   -->
+<!-- ===================== -->
+{% static 'images/about/banner2.png' as the_bg %}
+<section id="page-header" style="background-image: url({{the_bg}})">
+<h2>#shopfromhome</h2>
+
+<p>Save more with coupons & up to 70% off!</p>
+</section>
+
+<!-- ===================== -->
+<!--    Products Section   -->
+<!-- ===================== -->
+<section id="product1" class="section-p1">
+  {% include 'base/items_component.html' %}
+</section>
+
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'main.html' %} {% block content %} {% load static %}
+
+    <!-- ===================== -->
+    <!--    P-Header Section   -->
+    <!-- ===================== -->
+    {% static 'images/about/banner2.png' as the_bg %}
+    <section id="page-header" class="about-header"  style="background-image: url({{the_bg}})">
+        <h2>#orders</h2>
+        <p> thank you for trust! </p>
+    </section>
+
+    <!-- ===================== -->
+    <!---     cart details    --->
+    <!-- ===================== --> 
+    <section id="cart" class="section-p1">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Products</td>
+                    <td>Price</td>
+                    <td>Delivery Address</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for order in orders %}
+                <tr>
+                    <td>{{order.id}}</td>
+                    <td>{{order.order_items}}</td>
+                    <td>{{order.total_price}} UAH</td>
+                    <td>{{order.deliveryAddress}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+
+{% endblock %}

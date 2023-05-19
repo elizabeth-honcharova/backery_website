@@ -1,0 +1,33 @@
+<html>
+
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <meta name="description" content="Login - Register Template">
+    <meta name="author" content="Lorenzo Angelino aka MrLolok">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'styles/main.css' %}"> 
+    {% static 'images/giphy.gif' as the_bg %}
+    <style>
+        body {
+            background-image: url({{the_bg}});
+            background-repeat: no-repeat;
+            background-size: 100vw 100vh;
+            background-attachment: fixed;
+            background-position: center;   
+        }
+    </style>
+</head>
+
+<body>
+
+{% block content %} 
+
+{% endblock %}
+
+</body>
+
+</html>

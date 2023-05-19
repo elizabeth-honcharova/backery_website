@@ -1,0 +1,22 @@
+<!-- ===================== -->
+<!--    Products Section   -->
+<!-- ===================== -->
+
+{% load static %} 
+
+<div class="pro-container">
+    {% for item in items %}
+    {% url 'item-details' item.id as the_url %}
+    <div class="pro" onclick="window.location.href='{{ the_url }}';"">
+        {% get_static_prefix as STATIC_PREFIX %}
+        <img src="{{ STATIC_PREFIX }}images/products/{{item.imagePath}}" alt="">
+        <div class="des">
+            <span>{{item.category}}</span>
+            <h5>{{item.name}}</h5>
+            <h4>{{item.price}} UAH</h4>
+            <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
